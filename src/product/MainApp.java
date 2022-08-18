@@ -23,6 +23,16 @@ public class MainApp {
 
         OrderService orderService = new OrderServiceImpl(conn, productDao, orderDao);
 
-        ArrayList<OrderRespDto> orderRespDtoArrayList = orderService.고객별주문목록보기(1);
+        //given
+        int customerId = 1;
+
+        ArrayList<OrderRespDto> orderRespDtoArrayList = orderService.고객별주문목록보기(customerId);
+
+        for (int i = 0; i < orderRespDtoArrayList.size(); i++) {
+            System.out.println(orderRespDtoArrayList.get(0).getId());
+            System.out.println(orderRespDtoArrayList.get(0).getUsername());
+            System.out.println(orderRespDtoArrayList.get(0).getName());
+            System.out.println(orderRespDtoArrayList.get(0).getPrice());
+        }
     }
 }
