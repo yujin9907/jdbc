@@ -31,6 +31,7 @@ public class BoardApp {
             System.out.println(commedResDtoArrayList.get(i).getComments());
             System.out.println(commedResDtoArrayList.get(i).getUsername());
         }
+        // 그냥 db에서 커밋을 안 해서 테스트케이스가 없어서 발생한 오류; 덕분에 디버깅 존나 열심히 해봤따
 
     }
 }
